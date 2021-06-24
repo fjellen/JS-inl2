@@ -1,0 +1,35 @@
+InlämningsUppgift 2
+
+Del 1:
+
+Jag började med att se över den befintliga koden och se vad som skulle göras, det stod tydliga riktlinjer som kommentarer i koden.
+Det första som skulle kompliteras var att bygga en funktion som tar in två argument (title & description) och skapar ett element i JS.
+Elementet jag skapar vill jag ha som en <li> med en <article> i.
+I <article> finns en <header> och en <div>.
+Jag skapar mina element genom att göra variabler med const och sedan använda createElement metoden.
+Först så skapar jag grunden, <li> sen skapar jag <article> som ska ligga i listan och ger det en klass med className metoden.
+Sen skapar jag en <header> och ger den två klasser och ger textinnehållet (innerText) till det första argumentet för funktionen (title).
+Sista elementet är en div, så jag gör samma fast sätter innehållet till description istället.
+
+Nu kan jag sätta ihop dem, <article> ska ha <header> och <div> i sig.
+Jag använder appendChild och stoppar in dem. Och sen gör jag likadant med <article> till <li>.
+Nu kan jag returnera det färdiga elementet.
+
+
+Del 2:
+
+I nästa funktion så ska den söka igenom våran array efter vad som är skrivet i sökfältet.
+Jag vill att den ska jämföra sökningen med både title och description och sedan returnera en ny array med resultaten.
+
+Jag skapar en ny variabel för sökresultaten och använder filter metoden på den ursprungliga arrayen.
+Jag tilldelar två villkor på filtret och använder opperatorn || för att den ska fungara med både description och title.
+Efter det så använder jag  metoden includes för att se om den innehåller det som jag skriver i sökfältet.
+
+För att undvika skiftlägeskännslighet så omvandlar jag både sökningsinputen och det som ska sökas igenom till stora bokstäver med den inbyggda toUpperCase metoden.
+
+Sen returnerar jag den filtrerade arrayen.
+
+
+Del 3:
+
+När jag har stött på problem så har jag använt mig av console.log() för att se mina element i koosollen samt använt breakpoints för att gå igenom min kod.
